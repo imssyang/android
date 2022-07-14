@@ -55,6 +55,8 @@ _bin_files=(
 init() {
   _mkdir $HOME/bin
 
+  _create_symlink $HOME/studio/bin/studio.sh $HOME/bin/android-studio
+
   for fpath in "${_bin_files[@]}"; do
     fname=${fpath##*/}
     _create_symlink $fpath $HOME/bin/$fname
@@ -65,6 +67,8 @@ init() {
 }
 
 deinit() {
+  _delete_symlink $HOME/bin/android-studio
+
   for fpath in "${_bin_files[@]}"; do
     fname=${fpath##*/}
     _delete_symlink $HOME/bin/$fname

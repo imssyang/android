@@ -2,3 +2,5 @@ archive
 bin
 sdk
 studio
+**/*/build
+**/*/*.log
