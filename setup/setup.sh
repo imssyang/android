@@ -56,6 +56,8 @@ init() {
   _mkdir $HOME/bin
 
   _create_symlink $HOME/studio/bin/studio.sh $HOME/bin/android-studio
+  _create_symlink $HOME/sdk/emulator/lib     $HOME/sdk/emulator/qemu/linux-x86_64/lib
+  _create_symlink $HOME/sdk/emulator/lib64   $HOME/sdk/emulator/qemu/linux-x86_64/lib64
 
   for fpath in "${_bin_files[@]}"; do
     fname=${fpath##*/}
@@ -68,6 +70,8 @@ init() {
 
 deinit() {
   _delete_symlink $HOME/bin/android-studio
+  _delete_symlink $HOME/sdk/emulator/qemu/linux-x86_64/lib
+  _delete_symlink $HOME/sdk/emulator/qemu/linux-x86_64/lib64
 
   for fpath in "${_bin_files[@]}"; do
     fname=${fpath##*/}
