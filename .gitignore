@@ -1,6 +1,7 @@
 archive
 bin
 home
+sample/BVCLines
 sdk
 studio
 **/*/build
