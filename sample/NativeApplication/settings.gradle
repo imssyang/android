@@ -12,6 +12,5 @@ dependencyResolutionManagement {
         mavenCentral()
     }
 }
-rootProject.name = "MyApplication"
+rootProject.name = "NativeApplication"
 include ':app'
-include ':mylibrary'
