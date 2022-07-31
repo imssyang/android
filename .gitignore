@@ -3,6 +3,9 @@ bin
 home
 sample/BVCLines
 sample/ndk
+sample/BVCLine
+sample/TouchDemo
+sample/examples
 sdk
 studio
 **/*/build
